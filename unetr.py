@@ -107,7 +107,7 @@ class PositionwiseFeedForward(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x):
-        return self.w_2(self.dropout(F.relu(self.w_1(x)))) # gelu
+        return self.w_2(self.dropout(F.relu(self.w_1(x))))
 
 
 class TransformerBlock(nn.Module):
